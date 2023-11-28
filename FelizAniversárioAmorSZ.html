@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28/11/23</title>
+
+    <style>
+    
+    body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url("background.jpg");
+            background-position: center;
+            background-size: cover;
+            opacity: 0.9; 
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            color: #5e5656;
+            background-color: transparent; 
+        }
+
+        h1 {
+            color: #d41414;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #photo-section,
+        #message-section {
+            display: none;
+        }
+        img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color:  #db2424;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Surpresa Especial</h1>
+
+        <div id="content">
+            <div id="music-section">
+                <h2>A você, meu amor, dedico esta canção</h2>
+                <audio controls>
+                    <source src="Djavan - Pétala (Ao Vivo) (Áudio Oficial).mp3" type="audio/mp3">
+                </audio>
+                <h3>Gostaria que a ouvisse antenciosamente enquanto olha a página seguinte</h3>
+                <button onclick="showPhotoSection()">Próxima Surpresa</button>
+            </div>
+
+            <div id="photo-section">
+                
+                <h3>Ao teu lado todos os momentos se tornam únicos!</h3>
+                <h3>Em cada detalhe vejo seu amor...</h3>
+                <img src="img1.jpg" alt="Foto 1">
+                <img src="img2.JPG" alt="Foto 2">
+                <img src="img3.jpg" alt="Foto 3">
+                <img src="img4.jpg" alt="Foto 4">
+                <img src="img5.jpg" alt="Foto 5">
+                <img src="img6.jpg" alt="Foto 6">
+                <img src="img7.jpg" alt="Foto 7">
+                <img src="img8.jpg" alt="Foto 8">
+                <img src="img9.jpg" alt="Foto 9">
+                <img src="img10.jpg" alt="Foto 10">
+                <img src="img11.jpg" alt="Foto 11">
+                <img src="img12.jpg" alt="Foto 12">
+                <img src="img13.jpg" alt="Foto 13">
+                <img src="img14.jpg" alt="Foto 14">
+                <img src="img15.jpg" alt="Foto 15">
+                <img src="img16.jpg" alt="Foto 16">
+                <p> </p>
+
+                <button onclick="showMusicSection()">Anterior</button>
+                <button onclick="showMessageSection()">Próxima Surpresa</button> 
+            </div>
+
+            <div id="message-section">
+                <h2>Palavras vindas do Coração</h2>
+                <b><p>Você é a resposta da oração mais bonita que já fiz a Deus </p></b>
+                <p>Meu querido Emerson, palavras me faltam nesse momento para expressar a minha imensa felicidade e gratidão ao Senhor por estar aqui, mais uma vez, comemorando junto a ti essa data que é mais que especial: O dia que Ele te trouxe ao mundo para ser o maior presente agraciado a mim.</p>
+                <p>Meu bem, te desejar as coisas mais lindas desse mundo ainda não seria suficiente comparado a tudo que mereces. 
+                Tenho muito orgulho de você e do homem cada vez mais incrível que está se tornando. Você me inspira a buscar o meu melhor em todos os aspectos, dia após dia. Muito obrigada por tudo que você é e representa em minha vida. Vou estar sempre aqui torcendo pelo seu sucesso! </p>
+                <p>Escolhi colocar a canção "Pétala" no início dessa dedicatória porque ela diz exatamente aquilo que eu desejo expressar, sem que comece a chorar antes. Ó, meu amor, viver é mesmo todo sacrifício feito em seu nome!
+                    E quanto mais desejo um beijo seu, muito mais eu vejo gosto em viver...</p>
+                    <p>Cada minuto que eu tenho a oportunidade de passar ao seu lado se torna um momento singular em minha vida. Você faz cada palavra virar poesia e qualquer tempestade se transformar em calmaria. E é assim que desejo passar o resto de minha vida, sendo sua alegria, sua paz, seu apoio e o seu lar, tal como você é tudo isso para mim. </p>
+                <p>Admito que nunca tinha programado com tanta felicidade antes! E é com o coração cheio de amor e os olhos cheios de lágrimas que encerro essa pequena declaração, mais uma vez lhe desejando um feliz aniversário e infinitas bençãos de Deus! Que comemoremos juntos essa data por toda vida! Estarei aqui pra sempre por você!</p>
+                <p>Espero que tenha gostado! Beijos, meu príncipe! </p>
+                <p></p>
+                <button onclick="showPhotoSection()">Anterior</button>
+                <p> </p>
+                <hr>
+                <footer>
+                    <p align="center"><b>Página criada por: Sua namorada que te ama infinitamente sz </b></p>
+           </footer>
+           
+            </div>
+        </div>
+    </div>
+
+    <script>
+       function showPhotoSection() {
+            document.getElementById('music-section').style.display = 'none';
+            document.getElementById('photo-section').style.display = 'block';
+            document.getElementById('message-section').style.display = 'none';
+        }
+
+        function showMessageSection() {
+            document.getElementById('photo-section').style.display = 'none';
+            document.getElementById('message-section').style.display = 'block';
+            document.getElementById('music-section').style.display = 'none';
+        }
+
+        function showMusicSection() {
+            document.getElementById('photo-section').style.display = 'none';
+            document.getElementById('message-section').style.display = 'none';
+            document.getElementById('music-section').style.display = 'block';
+        }
+
+
+    </script>
+
+</body>
+</html>
